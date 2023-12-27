@@ -1,0 +1,144 @@
+html{
+    --soft-red:hsl(0, 93%, 68%);
+    --desaturated-red:hsl(0, 36%, 70%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+    --gradient-1: Linear-gradient( 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+    --gradient-2: linear-gradient(135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+    --font-family: josefin sans;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    transition: 0.3s ease-in-out;
+}
+img{
+    max-width: 100%;
+}
+body{
+    background-color: var(--gradient-2);
+    display: fl;
+}
+h1{
+    font-size: 3.5rem;
+    font-weight: initial;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+h1 span{
+    color: var(--soft-red);
+    font-weight: 300;
+    letter-spacing: 3px;
+    /* font-family: josefin sans; */
+}
+p{
+    color: var(--soft-red);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+
+}
+
+form{
+    display: flex;
+}
+form input{
+    padding: 14px 10px;
+    width: 60%;
+    font-size: 1rem;
+    border: 1px solid var(--desaturated-red);
+    outline: none;
+    border-right: none;
+}
+form .btn-submit{
+    background-color: var(--soft-red);
+    border: 1px solid var(--desaturated-red);
+    padding: 10px 1.4rem;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: -1.5rem;
+    transition: 0.3s ease-in-out;
+}
+.btn-submit:hover{
+    transform: scale(1.1);
+    background-color: var(--desaturated-red);
+}
+::placeholder{
+    font-size: 20px;
+    color: var(--desaturated-red);
+}
+
+
+
+
+
+
+.hero-img{
+    max-width: 350px;
+    margin-top: -2rem;
+}
+.main-img{
+    width: 100%;
+    height: 100%;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+#header{
+    max-width: 600px;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+}
+.logo{
+
+    margin: 1rem 1.5rem;
+}
+
+
+
+/*-------------Responsive Web Design--------------*/
+@media(max-width: 768px) {
+ .container{
+    flex-direction: column-reverse;
+    height: 100%;
+
+ } 
+ .hero-img{
+display: none;
+}
+ .main-img{
+    margin: 4rem 0 0 0;
+    max-width: 100%;
+    height: 350px;
+    background-image: url(images/hero-mobile.jpg);
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+ }
+
+ #header{
+    max-width: 100%;
+    margin-top: 2rem;
+ }
+
+
+ /*-------text and other contents--------*/
+ .text-content{
+    text-align: center;
+ }
+ form input{
+    margin: 0 auto;
+    width: 90%;
+ }
+
+}
